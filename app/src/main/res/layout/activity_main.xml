@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Aluno Section -->
+
+    <!-- Buttons to View -->
+
+    <!-- ListView -->
+
+    <EditText
+        android:id="@+id/edtNomeExemplar"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="1dp"
+        android:hint="Nome do Exemplar"
+        app:layout_constraintBottom_toTopOf="@+id/edtTipoExemplar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewAlunos" />
+
+    <EditText
+        android:id="@+id/edtCodigoExemplar"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Código do Exemplar"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddExemplar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTipoExemplar" />
+
+    <EditText
+        android:id="@+id/edtTipoExemplar"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="1dp"
+        android:hint="Tipo do Exemplar (Livro/Revista)"
+        app:layout_constraintBottom_toTopOf="@+id/edtCodigoExemplar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeExemplar" />
+
+    <Button
+        android:id="@+id/btnAddExemplar"
+        android:layout_width="233dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="19dp"
+        android:text="Adicionar Exemplar"
+        app:layout_constraintBottom_toTopOf="@+id/edtAlunoNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigoExemplar" />
+
+    <EditText
+        android:id="@+id/edtAlunoNome"
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="49dp"
+        android:hint="Nome do Aluno"
+        app:layout_constraintBottom_toTopOf="@+id/edtAlunoRa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddExemplar" />
+
+    <EditText
+        android:id="@+id/edtAlunoRa"
+        android:layout_width="290dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="9dp"
+        android:hint="RA do Aluno"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddAluno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAlunoNome" />
+
+    <EditText
+        android:id="@+id/edtAlunoEmail"
+        android:layout_width="290dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="50dp"
+        android:hint="Email do Aluno"
+        app:layout_constraintBottom_toBottomOf="@+id/edtAlunoRa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtAlunoNome" />
+
+    <Button
+        android:id="@+id/btnAddAluno"
+        android:layout_width="237dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="27dp"
+        android:text="Adicionar Aluno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAlunoRa" />
+
+    <Button
+        android:id="@+id/btnViewExemplares"
+        android:layout_width="182dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:text="Ver Exemplares"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnViewAlunos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnViewAlunos"
+        android:layout_width="182dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="39dp"
+        android:text="Ver Alunos"
+        app:layout_constraintBottom_toTopOf="@+id/edtNomeExemplar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnViewExemplares"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="391dp"
+        android:layout_height="107dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewAlunos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="30dp"
+        android:text="Otavio Gabriel Ribeiro Scabio - RA 1110482223043"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
